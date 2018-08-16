@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trivia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styletest.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Condensed" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 pageheader">
+                <h1>Waste Relations Trivia</h1>
+                
+            </div>
+            <div class="col-sm-5"></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-12 startScreen">
+                <p id="instructions">Try to answer ten questions correctly
+                    <br>in 60 seconds or less and you too can be a politician.</p>
+                <button type="button" class="btn btn-info btn-lg buttonstyle startbutton">Get Started!</button>
+            </div>
+        </div>
+        <div class="row theTimer">
+            <div class="col-sm-6">
+                <p style="font-size: 50px;">Time Left:&nbsp<span id="show-number"></span></p>
+            </div>
+            <div class="col-sm-6"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-9 questionColumn">
+                <form>
+                    <p>Question 1:  Which level of Government approves licenses for waste management facilities? </p>
+                    <input type="radio" name="question1" value="Federal"> Federal
+                    <br>
+                    <input type="radio" name="question1" value="Provincial"> Provincial
+                    <br>
+                    <input type="radio" name="question1" value="Municipal"> Both
+                    <br>
+                    <br>
+                    <p>Question 2: What level of Government is responsible for collecting waste?</p>
+                    <input type="radio" name="question2" value="Federal"> Federal
+                    <br>
+                    <input type="radio" name="question2" value="Provincial"> Provincial
+                    <br>
+                    <input type="radio" name="question2" value="Municipal"> Municipal
+                    <br>
+                    <br>
+                    <p>Question 3: Which level of Govenement is responsible for enacting laws relating to toxic substances?</p>
+                    <input type="radio" name="question3" value="Federal"> Federal
+                    <br>
+                    <input type="radio" name="question3" value="Provincial"> Provincial
+                    <br>
+                    <input type="radio" name="question3" value="Municipal"> Municipal
+                    <br>
+                    <br>
+                    <p>Question 4: Which level of Government is responsible for dealing with waste in bodies of water?</p>
+                    <input type="radio" name="question4" value="Federal"> Federal
+                    <br>
+                    <input type="radio" name="question4" value="Provincial"> Provincial
+                    <br>
+                    <input type="radio" name="question4" value="Depends"> Depends
+                    <br>
+                    <br>
+                    <p>Question 5: Which level of Government determines what items are recyclable?</p>
+                    <input type="radio" name="question5" value="Federal"> Federal
+                    <br>
+                    <input type="radio" name="question5" value="Provincial"> Provincial
+                    <br>
+                    <input type="radio" name="question5" value="Municipal"> Municipal
+                    <br>
+                    <br>
+                    <p>Question 6: Are single serve coffee pods recyclable?</p>
+                    <input type="radio" name="question6" value="Yes"> Yes
+                    <br>
+                    <input type="radio" name="question6" value="No"> No
+                    <br>
+                    <input type="radio" name="question6" value="Depends where you live"> Depends where you live
+                    <br>
+                    <br>
+                    <p>Question 7: Why isn't black plastic recylable in Toronto?</p>
+                    <input type="radio" name="question7" value="Chemical makeup of the plastic is not recyclable"> Chemical makeup of the plastic is not recyclable
+                    <br>
+                    <input type="radio" name="question7" value="It is recyclable"> It is recyclable
+                    <br>
+                    <input type="radio" name="question7" value="The conveyer line is black and the optical reader can't distinguish between colours"> The conveyer line is black and the optical reader can't distinguish between colours.
+                    <br>
+                    <br>
+                    <p>Question 8: <p>Which level of Government is responsible for monitoring the interprovincial movement of waste?</p>
+                    <input type="radio" name="question8" value="Federal">Federal
+                    <br>
+                    <input type="radio" name="question8" value="Provincial"> Provincial
+                    <br>
+                    <input type="radio" name="question8" value="Municipal"> Municipal
+                    <br>
+                    <br>
+                    <p>Question 9: What percentage of blue box material is not recyclable?</p>
+                    <input type="radio" name="question9" value="10%"> 10%
+                    <br>
+                    <input type="radio" name="question9" value="14%"> 14%
+                    <br>
+                    <input type="radio" name="question9" value="27%"> 27%
+                    <br>
+                    <br>
+                    <p>Question 10: How do you dispose of hazardous waste in Toronto?</p>
+                    <input type="radio" name="question10" value="Toxic Taxi">Toxic Taxi
+                    <br>
+                    <input type="radio" name="question10" value="Depot"> Depot
+                    <br>
+                    <input type="radio" name="question10" value="Either"> Either
+                    <br>
+                </form>
+                <br>
+                <button type="button" class="btn btn-info btn-lg finish">Finish
+            </div>
+            <!-- <div class="col-sm-3"></div> -->
+        </div>
+        <div class="row FinishScreen">
+            <div class="col-sm-9">
+                <p>Time's Up! Your final score:</p>
+                <p>Correct Responses:&nbsp<span id="rightResponses"></span></p>
+                <p>Incorrect Responses:&nbsp<span id="wrongResponses"></span></p>
+                <br>
+
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+    <!-- jQuery Link -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!-- Javascript Link -->
+    <script src="apptest.js"></script>
+</body>
+
+</html>
